@@ -1,13 +1,12 @@
-{{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
-
-{{ partial "short-text" .Params.blurb}}
-
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
-
-{{ end }}
+{{ define "main" -}}
+  <div class="posts grid">
+    <!-- <div class="grid-sizer"></div> -->
+    {{ range .Site.RegularPages -}}
+    <div class="grid-item">
+      <a href="{{ .Permalink }}">
+        <img class="home-page-img" src="{{ .Params.img }}">
+      </a>
+    </div>
+    {{- end }}
+  </div>
+{{- end }}

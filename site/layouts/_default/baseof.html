@@ -1,17 +1,32 @@
-<!doctype html>
-<html lang="{{ $.Site.Language.Lang }}">
-  {{ partial "head" . }}
-  <body class="sans-serif">
+{{ partial "head.html" . }}
+  <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+  {{ partial "sidebar.html" . }}
+    <main class="content container">
+    {{ block "main" . -}}{{- end }}
+    </main>
 
-    {{ block "header" . }}{{ partial "nav" . }}{{end}}
-
-    {{ block "main" . }}{{ end }}
-
-    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
-
-    {{ $script := .Site.Data.webpack.main }}
-    {{ with $script.js }}
-      <script src="{{ relURL . }}"></script>
+    {{ if not .Site.IsServer }}
+      {{ template "_internal/google_analytics.html" . }}
     {{ end }}
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+      var elem = document.querySelector('.grid');
+      // var msnry = new Masonry( elem, {
+      //   // options
+      //   itemSelector: '.grid-item',
+      //   // use element for option
+      //   columnWidth: '.grid-sizer',
+      //   percentPosition: true,
+      //   fitWidth: true,
+      //   gutter: 20
+      // });
+      var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        // columnWidth: 200,
+        gutter: 20,
+        fitWidth: true,
+      });
+    </script>
   </body>
 </html>
