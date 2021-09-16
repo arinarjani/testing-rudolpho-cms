@@ -9,6 +9,7 @@
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script>
       var elem = document.querySelector('.grid');
       // var msnry = new Masonry( elem, {
@@ -20,13 +21,24 @@
       //   fitWidth: true,
       //   gutter: 20
       // });
-      var msnry = new Masonry( elem, {
-        // options
-        itemSelector: '.grid-item',
-        // columnWidth: 200,
-        gutter: 20,
-        fitWidth: true,
-      });
+
+      imagesLoaded( elem, () => {
+          new Masonry( elem, {
+            // options
+            itemSelector: '.grid-item',
+            // columnWidth: 200,
+            gutter: 20,
+            fitWidth: true,
+          })
+        } 
+      );
+      // var msnry = new Masonry( elem, {
+      //   // options
+      //   itemSelector: '.grid-item',
+      //   // columnWidth: 200,
+      //   gutter: 20,
+      //   fitWidth: true,
+      // });
     </script>
   </body>
 </html>
