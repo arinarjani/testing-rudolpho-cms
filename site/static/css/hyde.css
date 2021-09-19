@@ -145,7 +145,11 @@ a.sidebar-nav-item:focus {
   max-width: 100%;
 }
 
+/* < */
 @media (max-width: 700px) {
+  /* .grid-item {
+    max-width: 10rem;
+  } */
   .content {
     padding-top: 1.25rem;
   }
@@ -158,6 +162,13 @@ a.sidebar-nav-item:focus {
     /* margin-right: 2rem; */
   }
 } 
+
+/* < for ipad's */
+@media (max-width: 1024px) {
+  .grid-item {
+    width: 12rem;
+  }
+}
 
 /* > */
 @media (min-width: 1280px) {
@@ -323,7 +334,7 @@ a.sidebar-nav-item:focus {
 
 .post {
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  /* grid-template-rows: repeat(3, auto); */
   grid-template-columns: 1fr;
 }
 
