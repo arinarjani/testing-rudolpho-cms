@@ -12,6 +12,7 @@ theme = "hyde"
 
 [params]
   description = "My name is Rudolpho and I am an aspiring photographer. Currenly I am looking to shoot photos/videos for personal brands on websites like OnlyFans."
+  about = "this is my about page"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
