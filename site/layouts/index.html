@@ -2,11 +2,13 @@
   <div class="posts grid">
     <!-- <div class="grid-sizer"></div> -->
     {{ range .Site.RegularPages -}}
-    <div class="grid-item">
-      <a href="{{ .Permalink }}">
-        <img class="home-page-img" src="{{ .Params.image }}" />
-      </a>
-    </div>
+      {{if ne .Title "About"}}
+        <div class="grid-item">
+          <a href="{{ .Permalink }}">
+            <img class="home-page-img" src="{{ .Params.image }}" />
+          </a>
+        </div>
+      {{ end }}
     {{- end }}
   </div>
 {{- end }}
