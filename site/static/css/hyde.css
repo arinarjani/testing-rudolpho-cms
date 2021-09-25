@@ -274,6 +274,10 @@ a.sidebar-nav-item:focus {
 
 /* @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap'); */
 
+.sidebar {
+  background-color: #020202;
+}
+
 .grid:after {
   content: '';
   display: block;
