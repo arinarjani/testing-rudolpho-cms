@@ -7,7 +7,8 @@ theme = "hyde"
 [Menus]
   main = [
       {Name = "Github", URL = "https://github.com/arinarjani/"},
-      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/username/"}
+      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/username/"},
+      {Name = "About", URL = "/about/"}
   ]
 
 [params]
