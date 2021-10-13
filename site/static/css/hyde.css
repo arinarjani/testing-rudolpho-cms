@@ -361,9 +361,12 @@ a.sidebar-nav-item:focus {
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 1rem 0 3rem 0;
+  }
   .grid-item {
     /* width: 80vw; */
-    width: 40vw;
+    width: 45vw;
   }
 }
 
