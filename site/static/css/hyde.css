@@ -362,7 +362,8 @@ a.sidebar-nav-item:focus {
 
 @media (max-width: 500px) {
   .grid-item {
-    width: 80vw;
+    /* width: 80vw; */
+    width: 40vw;
   }
 }
 
