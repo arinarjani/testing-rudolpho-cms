@@ -5,7 +5,7 @@
       {{if ne .Title "About"}}
         <div class="grid-item">
           <a href="{{ .Permalink }}">
-            <img class="home-page-img" src="{{ .Params.image }}" />
+            <img class="home-page-img" src="{{ .Params.image }}" loading="lazy" />
           </a>
         </div>
       {{ end }}
